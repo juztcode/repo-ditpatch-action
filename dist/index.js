@@ -1345,13 +1345,12 @@ async function sendDispatchEvent(repository, event_type, client_payload, token) 
 
 async function run() {
     try {
-        const repository = core.getInput('repository') | process.env.REPOSITORY;
-        const eventType = core.getInput('event-type') | process.env.EVENT_TYPE;
-        const clientPayload = core.getInput('client-payload') | process.env.CLIENT_PAYLOAD;
-        const token = core.getInput('token') | process.env.TOKEN;
+        const repository = core.getInput('repository');
+        const eventType = core.getInput('event-type');
+        const clientPayload = core.getInput('client-payload');
+        const token = core.getInput('token');
 
-        const newMessageId = await sendDispatchEvent(repository, eventType, clientPayload, token);
-        core.setOutput('message-id', newMessageId);
+        await sendDispatchEvent(repository, eventType, clientPayload, token);
     } catch (error) {
         core.setFailed(error.message);
     }
