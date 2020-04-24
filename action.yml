@@ -1,0 +1,21 @@
+name: 'Repo Event Dispatch'
+description: 'Repo Event Dispatch - Github plugin'
+inputs:
+  event-type:
+    description: 'Repository dispatch event type'
+    required: true
+  token:
+    description: 'Github personal access token (With repo scope)'
+    required: true
+  repository:
+    description: 'Repository name to send dispatch event'
+    required: true
+  client-payload:
+    description: 'Client payload (JSON) to send with dispatch event'
+    required: false
+runs:
+  using: 'node12'
+  main: 'dist/index.js'
+branding:
+  icon: 'external-link'
+  color: 'gray-dark'

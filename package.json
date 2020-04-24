@@ -1,0 +1,34 @@
+{
+  "name": "github-repository-dispatch",
+  "version": "1.0.0",
+  "description": "Repository event dispatch github action plugin",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo 'No tests available'",
+    "build": "ncc build index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/juztcode/repo-ditpatch-action.git"
+  },
+  "keywords": [
+    "github-actions",
+    "javascript",
+    "github",
+    "repository_dispatch"
+  ],
+  "author": "randilfernando <randil.fernando@outlook.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/juztcode/repo-ditpatch-action/issues"
+  },
+  "homepage": "https://github.com/juztcode/repo-ditpatch-action#readme",
+  "dependencies": {
+    "@actions/core": "^1.2.3",
+    "@actions/github": "^2.1.1",
+    "axios": "^0.19.2"
+  },
+  "devDependencies": {
+    "@zeit/ncc": "^0.22.1"
+  }
+}
