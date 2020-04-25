@@ -1,4 +1,4 @@
-# Gitter notify - Github action
+# Repository Dispatch - Github action
 
 A [GitHub Action](https://github.com/features/actions) to send github repository dispatch event.
 
